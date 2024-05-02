@@ -132,9 +132,11 @@
             <name>ISecureElement</name>
             <instance>SIM1</instance>
             <instance>SIM2</instance>
+            <instance>eSE1</instance>
         </interface>
         <fqname>@1.2::ISecureElement/SIM1</fqname>
         <fqname>@1.2::ISecureElement/SIM2</fqname>
+        <fqname>@1.2::ISecureElement/eSE1</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
@@ -196,35 +198,14 @@
         </interface>
         <fqname>@2.3::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.asus.wifi.hostapd</name>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi.hostapd</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1</version>
         <interface>
-            <name>IAsusHostapd</name>
+            <name>IHostapd</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IAsusHostapd/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.asus.wifi.netutil</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IWifiNetUtil</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IWifiNetUtil/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.asus.wifi.rttutil</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IWifiRttUtil</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IWifiRttUtil/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.goodix.hardware.biometrics.fingerprint</name>
@@ -581,10 +562,20 @@
         <fqname>@1.0::IQtiOemHook/oemhook0</fqname>
         <fqname>@1.0::IQtiOemHook/oemhook1</fqname>
     </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+        <version>8</version>
+        <interface>
+            <name>IQtiRadioStable</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
+        <version>2.6</version>
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
@@ -592,16 +583,6 @@
         </interface>
         <fqname>@1.0::IQtiRadio/slot1</fqname>
         <fqname>@1.0::IQtiRadio/slot2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.qtiradio</name>
-        <transport>hwbinder</transport>
-        <version>2.6</version>
-        <interface>
-            <name>IQtiRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
         <fqname>@2.6::IQtiRadio/slot1</fqname>
         <fqname>@2.6::IQtiRadio/slot2</fqname>
     </hal>
@@ -759,12 +740,12 @@
     <hal format="hidl">
         <name>vendor.qti.qesdhal</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.2</version>
         <interface>
             <name>IQesdhal</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IQesdhal/default</fqname>
+        <fqname>@1.2::IQesdhal/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.qspmhal</name>
@@ -785,6 +766,23 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISlaService/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.data.connectionfactory</name>
+        <interface>
+            <name>IFactory</name>
+            <instance>slot0</instance>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.radio.ims</name>
+        <version>7</version>
+        <interface>
+            <name>IImsRadio</name>
+            <instance>imsradio0</instance>
+            <instance>imsradio1</instance>
+        </interface>
     </hal>
     <sepolicy>
         <version>32.0</version>
