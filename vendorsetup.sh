@@ -56,6 +56,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TAR_BINARY=1
 	export FOX_USE_ZIP_BINARY=1
 	export FOX_USE_SED_BINARY=1
+	export FOX_USE_ZSTD_BINARY=1
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
 
@@ -74,6 +75,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	#Magiskboot
 	export OF_USE_MAGISKBOOT=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
+	# TESTING
+	export FOX_USE_UPDATED_MAGISKBOOT=1
 
 	# OTA & MIUI
 	# vanilla build
