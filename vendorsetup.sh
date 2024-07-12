@@ -57,6 +57,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_ZIP_BINARY=1
 	export FOX_USE_SED_BINARY=1
 	export FOX_USE_ZSTD_BINARY=1
+	export FOX_USE_LZ4_BINARY=1
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
 
@@ -112,6 +113,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_VERSION=R12.1_A14
 	export OF_MAINTAINER="OMKAR-PARTE"
 	export FOX_VARIANT=RUI-AOSP
+	export OF_RECOVERY_AB_FULL_REFLASH_RAMDISK=1
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
